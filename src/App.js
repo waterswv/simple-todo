@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import ToDoForm from './ToDoForm.js'
-import ToDoList from './ToDoList.js'
 import './App.css';
 
 // This is a stateless function ... another way of creating a class component
-const ToDoItem = ({props}) => (
+const ToDoItem = (props) => (
   <li>{props.text}</li>
 );
 
@@ -39,11 +37,11 @@ class App extends Component {
             type="text"
             name="newToDo"
             placeholder="What needs to be done"
-            value={newTodo}
+            value={newToDo}
             onChange={(e) => this.setState({[e.target.name]: e.target.value})}
           />
         <button
-          type="button"
+          type="submit"
           className="save-button"
           >
           Save
